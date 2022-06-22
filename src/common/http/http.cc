@@ -47,7 +47,8 @@ bool IsUrlSafeCharacter(const char character) {
   return ((character >= 'A' && character <= 'Z') ||
           (character >= 'a' && character <= 'z') ||
           (character >= '0' && character <= '9') || (character == '-') ||
-          (character == '_') || (character == '.') || (character == '~'));
+          (character == '_') || (character == '.') || (character == '~')) ||
+          (character == '+') || (character == '%');
 }
 
 bool IsFormDataSafeCharacter(const char character) {
